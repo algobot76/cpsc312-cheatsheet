@@ -31,17 +31,39 @@
 
 \section{Haskell}
 
+\subsection*{Folding}
+\(foldr \oplus v [a1,a2,\ldots,an] = a1 \oplus (a2 \oplus (\ldots \oplus (an \oplus v)))\) \\
+\(foldl \oplus v [a1,a2,\ldots,an] = (((v \oplus a1) \oplus a2) \oplus \ldots) \oplus an\)
+
 \subsection*{Tail recursion}
 \haskellFile[firstline=9,lastline=15]{code/As5sol.hs}
+
+\subsection*{Reverse (pattern matching)}
+\haskellFile[firstline=26,lastline=31]{code/Lists4.hs}
+
+\subsection*{Reverse (lambda calculus)}
+\haskellFile[firstline=51,lastline=51]{code/Lists4.hs}
 
 \subsection*{Remove duplicates (keep 1st occurrence)}
 \haskellFile[firstline=46,lastline=53]{code/As5sol.hs}
 
+\subsection*{Remove duplicates (higher-order functions)}
+\haskellFile[firstline=33,lastline=34]{code/As6sol.hs}
+
 \subsection*{Apply}
 \haskellFile[firstline=81,lastline=90]{code/As5sol.hs}
 
+\subsection*{Apply (higher-order functions)}
+\haskellFile[firstline=57,lastline=68]{code/As6sol.hs}
+
 \subsection*{Delete exactly \(n\) elements}
 \haskellFile[firstline=105,lastline=115]{code/As5sol.hs}
+
+\subsection*{Tails}
+\haskellFile[firstline=10,lastline=11]{code/As6sol.hs}
+
+\subsection*{Split}
+\haskellFile[firstline=72,lastline=81]{code/As6sol.hs}
 
 \subsection*{BTree in Haskell}
 \haskellFile[firstline=3]{code/BTree.hs}
