@@ -35,6 +35,18 @@
 \(foldr \oplus v [a1,a2,\ldots,an] = a1 \oplus (a2 \oplus (\ldots \oplus (an \oplus v)))\) \\
 \(foldl \oplus v [a1,a2,\ldots,an] = (((v \oplus a1) \oplus a2) \oplus \ldots) \oplus an\)
 
+\subsection*{Different Types of Evaluation}
+\begin{itemize}
+    \item call-by-value: evaluate argument before applying
+    \item call-by-name:  reduction of function first
+    \item lazy evaluation (call-by-need): evaluate argument only once, only if needed
+    \begin{enumerate}
+        \item evaluation from outside in
+        \item otherwise (if it knows both arguments need to be evaluated)
+        from left to right
+    \end{enumerate}
+\end{itemize}
+
 \subsection*{Tail recursion}
 \haskellFile[firstline=9,lastline=15]{code/As5sol.hs}
 
