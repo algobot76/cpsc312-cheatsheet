@@ -3,8 +3,7 @@
 \usepackage[english]{babel}
 \usepackage[utopia,sfscaled]{mathdesign}
 \usepackage{multicol}
-\usepackage[top=2mm,bottom=2mm,left=3
-mm,right=3mm]{geometry}
+\usepackage[top=2mm,bottom=2mm,left=3mm,right=3mm]{geometry}
 \usepackage{lipsum}
 \usepackage{microtype}
 \usepackage{graphicx}
@@ -26,13 +25,25 @@ mm,right=3mm]{geometry}
 \begin{document}
 \tiny
 
-\newmintedfile[haskellFile]{haskell}{linenos=true,breaklines=true,numbersep=2pt}
+\newmintedfile[haskellFile]{haskell}{linenos=true,firstnumber=1,numbersep=2pt,breaklines=true}
 
 \begin{multicols*}{5}
 
 \section{Haskell}
 
-\subsection{BTree in Haskell}
+\subsection*{Tail recursion}
+\haskellFile[firstline=9,lastline=15]{code/As5sol.hs}
+
+\subsection*{Remove duplicates (keep 1st occurrence)}
+\haskellFile[firstline=46,lastline=53]{code/As5sol.hs}
+
+\subsection*{Apply}
+\haskellFile[firstline=81,lastline=90]{code/As5sol.hs}
+
+\subsection*{Delete exactly \(n\) elements}
+\haskellFile[firstline=105,lastline=115]{code/As5sol.hs}
+
+\subsection*{BTree in Haskell}
 \haskellFile[firstline=3]{code/BTree.hs}
 
 \end{multicols*}
