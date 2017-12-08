@@ -35,7 +35,8 @@
 \(foldr \oplus v [a1,a2,\ldots,an] = a1 \oplus (a2 \oplus (\ldots \oplus (an \oplus v)))\) \\
 \(foldl \oplus v [a1,a2,\ldots,an] = (((v \oplus a1) \oplus a2) \oplus \ldots) \oplus an\)
 
-\subsection*{Different Types of Evaluation}
+\subsection*{Evaluation}
+\underline{Different Types of Evaluation}
 \begin{itemize}
     \item call-by-value: evaluate argument before applying
     \item call-by-name:  reduction of function first
@@ -46,6 +47,12 @@
         from left to right
     \end{enumerate}
 \end{itemize}
+\underline{Lazy Evaluation vs. Call-By-name} \\
+Lazy evaluation evaluates its arguments at most once, whereas call-by-name could evaluate an argument multiple times.
+
+\subsection*{Polymorphic typing}
+\underline{Definition} \\
+Polymorphic typing is when a function can take many types.
 
 \subsection*{Tail recursion}
 \haskellFile[firstline=9,lastline=15]{code/As5sol.hs}
@@ -82,6 +89,16 @@
 
 \subsection*{BTree (accumulators)}
 \haskellFile[firstline=24,lastline=32]{code/BTree.hs}
+
+\subsection*{Covert to upper case}
+\haskellFile[firstline=20,lastline=21]{code/mid3pr.hs}
+
+\subsection*{Subsequence}
+\haskellFile[firstline=28,lastline=32]{code/mid3pr.hs}
+
+\subsection*{Misc}
+Q:\@ In Haskell every function takes a single argument. What does this mean for functions that take 2 arguments, such as (\(+\))? \\
+A:\@ (\(+\)) applied to a single argument returns a function which takes one argument and returns a value.
 
 \end{multicols*}
 \end{document}
