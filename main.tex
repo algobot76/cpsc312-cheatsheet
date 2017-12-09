@@ -22,12 +22,39 @@
 \titlespacing{\section}{0pt}{\parskip}{-\parskip}
 \titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
 
+\graphicspath{{image/}}
+
+% TODO: Add BTree, BSTree, and BSTree2
+% TODO: Add tutorial solutions
+
 \begin{document}
 \tiny
 
+\newmintedfile[prologFile]{prolog}{linenos=true,firstnumber=1,numbersep=2pt,breaklines=true}
 \newmintedfile[haskellFile]{haskell}{linenos=true,firstnumber=1,numbersep=2pt,breaklines=true}
 
 \begin{multicols*}{5}
+
+\section{Prolog}
+
+\subsection*{Sample Box Model}
+\prologFile[firstline=6,lastline=19]{code/sillyeg.pl}
+\includegraphics[scale=0.15]{box_model}
+
+\subsection*{Delete Exactly 1 Elements}
+\prologFile[firstline=41,lastline=45]{code/as3sol.pl}
+
+\subsection*{Replace}
+\prologFile[firstline=55,lastline=61]{code/mid1asol.pl}
+
+\subsection*{Flatten}
+\prologFile[firstline=71,lastline=73]{code/mid2sol.pl}
+
+\subsection*{BTree (With Append)}
+\prologFile[firstline=3,lastline=8]{code/btree.pl}
+
+\subsection*{BTree (Without Append)}
+\prologFile[firstline=18,lastline=26]{code/btree.pl}
 
 \section{Haskell}
 
@@ -50,33 +77,36 @@
 \underline{Lazy Evaluation vs. Call-By-name} \\
 Lazy evaluation evaluates its arguments at most once, whereas call-by-name could evaluate an argument multiple times.
 
-\subsection*{Polymorphic typing}
+\subsection*{Polymorphic Typing}
 \underline{Definition} \\
 Polymorphic typing is when a function can take many types.
 
-\subsection*{Tail recursion}
+\subsection*{Tail Recursion}
 \haskellFile[firstline=9,lastline=15]{code/As5sol.hs}
 
-\subsection*{Reverse (pattern matching)}
+\subsection*{Reverse (Pattern Matching)}
 \haskellFile[firstline=26,lastline=31]{code/Lists4.hs}
 
-\subsection*{Reverse (lambda calculus)}
+\subsection*{Reverse (Lambda Calculus)}
 \haskellFile[firstline=51,lastline=51]{code/Lists4.hs}
 
-\subsection*{Remove duplicates (keep 1st occurrence)}
+\subsection*{Remove duplicates (Keep 1st Occurrence)}
 \haskellFile[firstline=46,lastline=53]{code/As5sol.hs}
 
-\subsection*{Remove duplicates (higher-order functions)}
+\subsection*{Remove Duplicates (Higher-order Functions)}
 \haskellFile[firstline=33,lastline=34]{code/As6sol.hs}
 
 \subsection*{Apply}
 \haskellFile[firstline=81,lastline=90]{code/As5sol.hs}
 
-\subsection*{Apply (higher-order functions)}
+\subsection*{Apply (Higher-Order Functions)}
 \haskellFile[firstline=57,lastline=68]{code/As6sol.hs}
 
-\subsection*{Delete exactly \(n\) elements}
+\subsection*{Delete Exactly \(n\) Elements}
 \haskellFile[firstline=105,lastline=115]{code/As5sol.hs}
+
+\subsection*{Delete Exactly \(n\) Elements (List Comprehensions)}
+\haskellFile[firstline=120,lastline=126]{code/As5sol.hs}
 
 \subsection*{Tails}
 \haskellFile[firstline=10,lastline=11]{code/As6sol.hs}
@@ -84,13 +114,11 @@ Polymorphic typing is when a function can take many types.
 \subsection*{Split}
 \haskellFile[firstline=72,lastline=81]{code/As6sol.hs}
 
-\subsection*{Covert to upper case}
+\subsection*{Covert to Upper Case}
 \haskellFile[firstline=20,lastline=21]{code/mid3pr.hs}
 
 \subsection*{Subsequence}
 \haskellFile[firstline=28,lastline=32]{code/mid3pr.hs}
-
-% TODO: Add BTree, BSTree, and BSTree2
 
 \subsection*{IO}
 \begin{verbatim}
