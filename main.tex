@@ -26,6 +26,7 @@
 
 % TODO: Add BTree, BSTree, and BSTree2
 % TODO: Add tutorial solutions
+% TODO: Add variants of dutch flag
 
 \begin{document}
 \tiny
@@ -49,6 +50,15 @@
 
 \subsection*{Flatten}
 \prologFile[firstline=71,lastline=73]{code/mid2sol.pl}
+
+\subsection*{Derivative}
+\prologFile[firstline=6,lastline=20]{code/as4sol.pl}
+
+\subsection*{Simplify}
+\prologFile[firstline=35,lastline=62]{code/as4sol.pl}
+
+\subsection*{Dutch Flag}
+\prologFile[firstline=75,lastline=131]{code/as4sol.pl}
 
 \subsection*{BTree (With Append)}
 \prologFile[firstline=3,lastline=8]{code/btree.pl}
@@ -102,11 +112,20 @@ Polymorphic typing is when a function can take many types.
 \subsection*{Apply (Higher-Order Functions)}
 \haskellFile[firstline=57,lastline=68]{code/As6sol.hs}
 
+\subsection*{Delete Excatly 1 Element (First Occurrence)}
+\haskellFile[firstline=13,lastline=21]{code/finalprsol.hs}
+
+\subsection*{Delete Excatly 1 Element (All Possibilities)}
+\haskellFile[firstline=25,lastline=29]{code/finalprsol.hs}
+
 \subsection*{Delete Exactly \(n\) Elements}
 \haskellFile[firstline=105,lastline=115]{code/As5sol.hs}
 
 \subsection*{Delete Exactly \(n\) Elements (List Comprehensions)}
 \haskellFile[firstline=120,lastline=126]{code/As5sol.hs}
+
+\subsection*{Append (All Possibilities)}
+\haskellFile[firstline=39,lastline=43]{code/finalprsol.hs}
 
 \subsection*{Tails}
 \haskellFile[firstline=10,lastline=11]{code/As6sol.hs}
@@ -130,6 +149,9 @@ do  v1 <- a1
 \end{verbatim}
 
 \subsection*{Misc}
+\underline{Prolog vs. Haskell} \\
+Prolog can do something like del1(val(x,V),[val(y,3),val(x,7),val(x,2)],R). to return the value of x as well as the rest of the list. Haskel can work with higher-order function, e.g., generalizing this delete1 to act on other functions of the elements (not just equality). \\
+\underline{Haskell Function Arguments} \\
 Q:\@ In Haskell every function takes a single argument. What does this mean for functions that take 2 arguments, such as (\(+\))? \\
 A:\@ (\(+\)) applied to a single argument returns a function which takes one argument and returns a value.
 
