@@ -27,6 +27,7 @@
 % TODO: Add BTree, BSTree, and BSTree2
 % TODO: Add tutorial solutions
 % TODO: Add variants of dutch flag
+% TODO: Add practice final q3 mapWhile
 
 \begin{document}
 \tiny
@@ -41,6 +42,27 @@
 \subsection*{Sample Box Model}
 \prologFile[firstline=6,lastline=19]{code/sillyeg.pl}
 \includegraphics[scale=0.15]{box_model}
+
+\subsection*{Sample Proof Procedure}
+\prologFile[firstline=38,lastline=50]{code/finalprsol.pl}
+\begin{minted}[breaklines]{text}
+wff([p,&,not,q,or,r],V).
+
+yes(V) :- wff([p,&,not,q,or,r],V).
+yes(V) :- terminal([p,&,not,q,or,r],Z1), binop(Z1,Y1), wff(Y1,V).
+yes(V) :- term(p), binop([&,not,q,or,r],Y1), wff(Y1,V).
+yes(V) :- binop([&,not,q,or,r],Y1), wff(Y1,V).
+yes(V) :- wff([not,q,or,r],V).
+yes(V) :- unop([not,q,or,r],Z2),wff(Z2,V).
+yes(V) :- wff([q,or,r],V).
+yes(V) :- terminal([q,or,r],Z3), binop(Z3,Y3), wff(Y3,V).
+yes(V) :- term(q), binop([or,r],Y3), wff(Y3,V).
+yes(V) :- binop([or,r],Y3), wff(Y3,V).
+yes(V) :- wff([r],V).
+yes(V) :- terminal([r],V).
+yes([]) :- term(r).
+yes([]).
+\end{minted}
 
 \subsection*{Delete Exactly 1 Elements}
 \prologFile[firstline=41,lastline=45]{code/as3sol.pl}
@@ -66,6 +88,9 @@
 
 \subsection*{Simplify}
 \prologFile[firstline=35,lastline=62]{code/as4sol.pl}
+
+\subsection*{Arithmetic Operations}
+\prologFile[firstline=4,lastline=19]{code/finalprsol.pl}
 
 \subsection*{Dutch Flag}
 \prologFile[firstline=75,lastline=131]{code/as4sol.pl}
@@ -143,11 +168,17 @@ Polymorphic typing is when a function can take many types.
 \subsection*{Split}
 \haskellFile[firstline=72,lastline=81]{code/As6sol.hs}
 
+\subsection*{Shuffle}
+\haskellFile[firstline=48,lastline=52]{code/finalprsol.hs}
+
 \subsection*{Covert to Upper Case}
 \haskellFile[firstline=20,lastline=21]{code/mid3pr.hs}
 
 \subsection*{Subsequence}
 \haskellFile[firstline=28,lastline=32]{code/mid3pr.hs}
+
+\subsection*{Average (One Pass)}
+\haskellFile[firstline=54,lastline=62]{code/finalprsol.hs}
 
 \subsection*{IO}
 \begin{verbatim}
@@ -158,9 +189,13 @@ do  v1 <- a1
     return (f v1 v2 ... vn)
 \end{verbatim}
 
-\subsection*{Misc}
+\section{Misc}
 \underline{Prolog vs. Haskell} \\
 Prolog can do something like del1(val(x,V),[val(y,3),val(x,7),val(x,2)],R). to return the value of x as well as the rest of the list. Haskel can work with higher-order function, e.g., generalizing this delete1 to act on other functions of the elements (not just equality). \\
+\underline{Main Advantage of Strong Typing} \\
+Strong typing help programmers eliminate many bugs before the program is put into production. \\
+\underline{Advantage of Interactive Development} \\
+Programmers can experiment and test their code interactively, and to see results immediately. \\
 \underline{Haskell Function Arguments} \\
 Q:\@ In Haskell every function takes a single argument. What does this mean for functions that take 2 arguments, such as (\(+\))? \\
 A:\@ (\(+\)) applied to a single argument returns a function which takes one argument and returns a value.
