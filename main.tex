@@ -65,27 +65,33 @@ yes([]).
 \subsection*{Delete Exactly 1 Elements}
 \prologFile[firstline=41,lastline=45]{code/as3sol.pl}
 
+\subsection*{Delete \(n\) Elements}
+\prologFile[firstline=54,lastline=73]{code/mid2prsol.pl}
+
 \subsection*{Replace}
 \prologFile[firstline=55,lastline=61]{code/mid1asol.pl}
-
-\subsection*{Flatten}
-\prologFile[firstline=71,lastline=73]{code/mid2sol.pl}
 
 \subsection*{Apply}
 \prologFile[firstline=20,lastline=32]{code/mid2prsol.pl}
 \prologFile[firstline=39,lastline=48]{code/mid2prsol.pl}
 
-\subsection*{Delete \(n\) Elements}
-\prologFile[firstline=54,lastline=73]{code/mid2prsol.pl}
+\subsection*{Flatten}
+\prologFile[firstline=71,lastline=73]{code/mid2sol.pl}
 
 \subsection*{Shuffle}
 \prologFile[firstline=1,lastline=5]{code/2016mid2sol.pl}
 
-\subsection*{Derivative}
-\prologFile[firstline=6,lastline=20]{code/as4sol.pl}
-
 \subsection*{Merge Sort}
 \prologFile[firstline=45,lastline=64]{code/final2016.pl}
+
+\subsection*{BTree (With Append)}
+\prologFile[firstline=3,lastline=8]{code/btree.pl}
+
+\subsection*{BTree (Without Append)}
+\prologFile[firstline=18,lastline=26]{code/btree.pl}
+
+\subsection*{Derivative}
+\prologFile[firstline=6,lastline=20]{code/as4sol.pl}
 
 \subsection*{Simplify}
 \prologFile[firstline=35,lastline=62]{code/as4sol.pl}
@@ -97,13 +103,10 @@ yes([]).
 \prologFile[firstline=10,lastline=36]{code/final2016.pl}
 
 \subsection*{Dutch Flag}
-\prologFile[firstline=75,lastline=131]{code/as4sol.pl}
+\prologFile[firstline=75,lastline=100]{code/as4sol.pl}
 
-\subsection*{BTree (With Append)}
-\prologFile[firstline=3,lastline=8]{code/btree.pl}
-
-\subsection*{BTree (Without Append)}
-\prologFile[firstline=18,lastline=26]{code/btree.pl}
+\subsection*{Reverse Dutch Flag}
+\prologFile[firstline=110,lastline=131]{code/as4sol.pl}
 
 \section{Haskell}
 
@@ -130,26 +133,17 @@ Lazy evaluation evaluates its arguments at most once, whereas call-by-name could
 \underline{Definition} \\
 Polymorphic typing is when a function can take many types.
 
+\subsection*{IO}
+\begin{verbatim}
+do  v1 <- a1
+    v2 <- a2
+    ...
+    vn <- an
+    return (f v1 v2 ... vn)
+\end{verbatim}
+
 \subsection*{Tail Recursion}
 \haskellFile[firstline=9,lastline=15]{code/As5sol.hs}
-
-\subsection*{Reverse (Pattern Matching)}
-\haskellFile[firstline=26,lastline=31]{code/Lists4.hs}
-
-\subsection*{Reverse (Lambda Calculus)}
-\haskellFile[firstline=51,lastline=51]{code/Lists4.hs}
-
-\subsection*{Remove duplicates (Keep 1st Occurrence)}
-\haskellFile[firstline=46,lastline=53]{code/As5sol.hs}
-
-\subsection*{Remove Duplicates (Higher-order Functions)}
-\haskellFile[firstline=33,lastline=34]{code/As6sol.hs}
-
-\subsection*{Apply}
-\haskellFile[firstline=81,lastline=90]{code/As5sol.hs}
-
-\subsection*{Apply (Higher-Order Functions)}
-\haskellFile[firstline=57,lastline=68]{code/As6sol.hs}
 
 \subsection*{Delete Excatly 1 Element (First Occurrence)}
 \haskellFile[firstline=13,lastline=21]{code/finalprsol.hs}
@@ -163,8 +157,26 @@ Polymorphic typing is when a function can take many types.
 \subsection*{Delete Exactly \(n\) Elements (List Comprehensions)}
 \haskellFile[firstline=120,lastline=126]{code/As5sol.hs}
 
+\subsection*{Remove duplicates (Keep 1st Occurrence)}
+\haskellFile[firstline=46,lastline=53]{code/As5sol.hs}
+
+\subsection*{Remove Duplicates (Higher-order Functions)}
+\haskellFile[firstline=33,lastline=34]{code/As6sol.hs}
+
+\subsection*{Apply}
+\haskellFile[firstline=81,lastline=90]{code/As5sol.hs}
+
+\subsection*{Apply (Higher-Order Functions)}
+\haskellFile[firstline=57,lastline=68]{code/As6sol.hs}
+
 \subsection*{Append (All Possibilities)}
 \haskellFile[firstline=39,lastline=43]{code/finalprsol.hs}
+
+\subsection*{Reverse (Pattern Matching)}
+\haskellFile[firstline=26,lastline=31]{code/Lists4.hs}
+
+\subsection*{Reverse (Lambda Calculus)}
+\haskellFile[firstline=51,lastline=51]{code/Lists4.hs}
 
 \subsection*{Tails}
 \haskellFile[firstline=10,lastline=11]{code/As6sol.hs}
@@ -172,31 +184,23 @@ Polymorphic typing is when a function can take many types.
 \subsection*{Split}
 \haskellFile[firstline=72,lastline=81]{code/As6sol.hs}
 
-\subsection*{Shuffle}
-\haskellFile[firstline=48,lastline=52]{code/finalprsol.hs}
-
-\subsection*{Covert to Upper Case}
-\haskellFile[firstline=20,lastline=21]{code/mid3pr.hs}
-
 \subsection*{Subsequence}
 \haskellFile[firstline=28,lastline=32]{code/mid3pr.hs}
 
-\subsection*{Average (One Pass)}
-\haskellFile[firstline=54,lastline=62]{code/finalprsol.hs}
-
-\subsection*{Powerset}
-\haskellFile[firstline=11,lastline=14]{code/final2016.hs}
+\subsection*{Shuffle}
+\haskellFile[firstline=48,lastline=52]{code/finalprsol.hs}
 
 \subsection*{Merge Sort}
 \haskellFile[firstline=19,lastline=35]{code/final2016.hs}
 
+
 \subsection*{BTree}
 \haskellFile[firstline=8,lastline=10]{code/BTree.hs}
 
-\subsection*{BSTreee tolist (With Append)}
+\subsection*{BTreee tolist (With Append)}
 \haskellFile[firstline=12,lastline=16]{code/BTree.hs}
 
-\subsection*{BSTreee tolist (Without Append)}
+\subsection*{BTreee tolist (Without Append)}
 \haskellFile[firstline=25,lastline=34]{code/BTree.hs}
 
 \subsection*{BSTree}
@@ -223,14 +227,14 @@ Polymorphic typing is when a function can take many types.
 \subsection*{BSTree lefttree}
 \haskellFile[firstline=106,lastline=108]{code/finalprsol.hs}
 
-\subsection*{IO}
-\begin{verbatim}
-do  v1 <- a1
-    v2 <- a2
-    ...
-    vn <- an
-    return (f v1 v2 ... vn)
-\end{verbatim}
+\subsection*{Average (One Pass)}
+\haskellFile[firstline=54,lastline=62]{code/finalprsol.hs}
+
+\subsection*{Powerset}
+\haskellFile[firstline=11,lastline=14]{code/final2016.hs}
+
+\subsection*{Covert to Upper Case}
+\haskellFile[firstline=20,lastline=21]{code/mid3pr.hs}
 
 \section{Misc}
 \underline{Prolog vs. Haskell} \\
