@@ -181,7 +181,8 @@ do  v1 <- a1
 \haskellFile[firstline=81,lastline=90]{code/As5sol.hs}
 
 \subsection*{Apply (Higher-Order Functions)}
-\haskellFile[firstline=57,lastline=68]{code/As6sol.hs}
+\haskellFile[firstline=57,lastline=59]{code/As6sol.hs}
+\haskellFile[firstline=61,lastline=68]{code/As6sol.hs}
 
 \subsection*{Append (All Possibilities)}
 \haskellFile[firstline=39,lastline=43]{code/finalprsol.hs}
@@ -259,6 +260,18 @@ thing (the unique names assumption); there can be multiple URIs for
 the same thing.) \\
 \underline{Prolog vs. Haskell} \\
 Prolog can do something like del1(val(x,V),[val(y,3),val(x,7),val(x,2)],R). to return the value of x as well as the rest of the list. Haskel can work with higher-order function, e.g., generalizing this delete1 to act on other functions of the elements (not just equality). \\
+Prolog
+\begin{itemize}
+    \item constraint-based programming
+    \item You can easily specify a set of constraints that may have more than one solution and Prolog will find all of them
+    \item In Haskell one would have to manually implement a constraint solver and associated data structures to represent constraints, then write the constraints and pass them to the solver. Multiple execution paths are not directly supported.
+\end{itemize}
+Haskell
+\begin{itemize}
+    \item static typechecking
+    \item You can automatically catch many programming errors before even running the program - Haskell detects a lot of inconsistencies for you
+    \item In Prolog test the program and reason about its behaviour. Sometimes you find bugs that would have been type errors when running the program and have to identify and fix them.
+\end{itemize}
 \underline{Main Advantage of Strong Typing} \\
 Strong typing help programmers eliminate many bugs before the program is put into production. \\
 \underline{Advantage of Interactive Development} \\
